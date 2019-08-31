@@ -126,7 +126,7 @@ std::cout << "Proton energy, which is " << protonEnergy << ", is " << protonEner
   2. `cd BaseUnits && mkdir src && cd src`
   3. `git clone TODO #clone from github`
   4. `cd .. && mkdir opt && cd opt && mkdir build && cd build #Prepare for an out-of-source build`
-  6. `cmake ../../src -DCMAKE\_INSTALL\_PREFIX=`pwd`/.. -D CMAKE_BUILD_TYPE=Release` #Install to current directory instead of /usr on UNIX`
+  6. `cmake ../../src -DCMAKE\_INSTALL\_PREFIX=`pwd`/.. -DCMAKE_BUILD_TYPE=Release` #Install to current directory instead of /usr on UNIX`
   7. `make install`
   8. `make test #Make sure everything works`
 
