@@ -1,6 +1,8 @@
 cmake_minimum_required( VERSION 2.8.12 )
 project( BaseUnits )
+
 include(CTest)
+include(CMakePackageConfigHelpers)
 
 #Compiler flags
 set( GCC_Flags_For_CXX "-std=c++1y -Wall" )
@@ -19,3 +21,14 @@ include_directories("${PROJECT_SOURCE_DIR}")
 
 add_subdirectory(core)
 add_subdirectory(test)
+
+#Make this package findable CMake for other package
+write_basic_package_version_file(BaseUnitsConfigVersion.cmake
+                                 COMPATIBILITY SameMajorVersion
+                                 VERSION 1.0.0)
+configure_package_config_file(PackageConfig.cmake.in
+                              BaseUnitsConfig.cmake
+                              PATH_VARS CMAKE_INSTALL_PREFIX
+                              INSTALL_DESTINATION lib/cmake)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/BaseUnitsConfigVersion.cmake ${CMAKE_CURRENT_BINARY_DIR}/BaseUnitsConfig.cmake DESTINATION lib/cmake)

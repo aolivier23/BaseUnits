@@ -79,9 +79,6 @@ namespace units
       //                use.  PREFIX would only be used to relate one prefixed unit to another.
       //                All I'm missing right now is unit names for prefixed quantity<>s.  Maybe I
       //                could even do something crazy like specialize a class template for std::milli.
-  
-      //TODO: Don't do multiplication if OTHER_QUANTITY happens to have a PREFIX of std::ratio<1>!
-      //      I'll probably need a struct template to allow for the specializations I need.
       template <class OTHER_QUANTITY>
       FLOATING_POINT in() const
       {
