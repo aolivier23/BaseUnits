@@ -3,7 +3,7 @@
 //Author: Andrew Olivier aolivier@ur.rochester.edu
 
 //The library I want to test: Does compile-time unit checking
-#include "units.h"
+#include "core/units.h"
 
 //c++ includes
 #include <iostream>
