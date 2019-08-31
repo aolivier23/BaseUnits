@@ -1,8 +1,8 @@
-#BaseUnits
+# BaseUnits
 A compile-time unit checking and conversion library for c++.
 
-#Description and Usage
-##Overview
+# Description and Usage
+## Overview
 BaseUnits enables a c++ compiler to check for expressions that mix
 quantities in different unit systems.  Numbers are associated with
 compile-time tags that are unique to each base unit.  Quantities 
@@ -14,7 +14,7 @@ Prefix system inspired by the design of the c++11 standard library's
 std::chrono header.  I've probably be influenced by GenVector, Geant4
 and CLHEP.
 
-##Key Features
+## Key Features
  - Compiler-checked units for expressions with no runtime performance
    penalty.
 
@@ -35,7 +35,7 @@ and CLHEP.
    ROOT I/O.  All quantities with units are aligned as their underlying
    arithmetic types.
 
-##Central Components
+## Central Components
  - `quantity<>`: A number associated with a user-defined unit.  See quantity.h.
                  Units with a metric (or otherwise) prefix applied are related
                  by `std::ratio<>`.
@@ -55,7 +55,7 @@ and CLHEP.
  - `DECLARE_UNIT()` and `DECLARE_RELATED_UNIT()`: User creation of a unit tag.  Also
                                                   generates literal conversion operators.
 
-##Usage
+## Usage
 1. `#include "units.h"`
 
 2. Define a system of units: `DECLARE_UNIT(MeV)`
@@ -66,12 +66,12 @@ and CLHEP.
 4. When you need to pass a `quantity<>`'s value to another library that doesn't
    know about BaseUnits, convert back to double with `number.in<MeV>()`.
 
-##Testing
+## Testing
 After installation, make test.
 
 **TODO**: Explain tests run
 
-##Example
+## Example
 ```c++
 //Set up a system of units based on MeV.  GeV are related to MeV by a prefix.
 DECLARE_UNIT(MeV)
@@ -116,7 +116,7 @@ std::cout << "Proton energy, which is " << protonEnergy << ", is " << protonEner
 //See test_units.cpp for more examples.
 ```
 
-#Installation
+# Installation
  - Copy the contents of the core directory to your project.  I like to put them in
    a directory called units.
 
