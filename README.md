@@ -69,7 +69,11 @@ and CLHEP.
 ## Testing
 After installation, make test.
 
-**TODO**: Explain tests run
+Currently, there are 2 classes of tests:
+1. `test_arithmetic`: Runs a basic example of using this library.  Checks that unit conversions work.
+2. `test_assertCompatibleUnits`: Ensures that compilation fails when trying to mix units.
+
+**TODO** Test with ROOT I/O
 
 ## Example
 ```c++
@@ -126,7 +130,7 @@ std::cout << "Proton energy, which is " << protonEnergy << ", is " << protonEner
   2. `cd BaseUnits && mkdir src && cd src`
   3. `git clone TODO #clone from github`
   4. `cd .. && mkdir opt && cd opt && mkdir build && cd build #Prepare for an out-of-source build`
-  6. `cmake ../../src -DCMAKE_INSTALL_PREFIX=`pwd`/.. -DCMAKE_BUILD_TYPE=Release` #Install to current directory instead of /usr on UNIX`
+  6. `cmake ../../src -DCMAKE_INSTALL_PREFIX=`pwd`/.. -DCMAKE_BUILD_TYPE=Release #Install to current directory instead of /usr on UNIX`
   7. `make install`
   8. `make test #Make sure everything works`
 
