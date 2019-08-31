@@ -11,7 +11,7 @@ other quantities with the same base unit, and converted into basic
 arithmetic types in a particular prefix.
 
 Prefix system inspired by the design of the c++11 standard library's
-std::chrono header.  I've probably be influenced by GenVector, Geant4
+std::chrono header.  I've probably been influenced by GenVector, Geant4
 and CLHEP.
 
 ## Key Features
