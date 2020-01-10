@@ -29,6 +29,6 @@ write_basic_package_version_file(BaseUnitsConfigVersion.cmake
 configure_package_config_file(PackageConfig.cmake.in
                               BaseUnitsConfig.cmake
                               PATH_VARS CMAKE_INSTALL_PREFIX
-                              INSTALL_DESTINATION lib/cmake)
+                              INSTALL_DESTINATION lib/${CMAKE_PROJECT_NAME}/cmake)
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/BaseUnitsConfigVersion.cmake ${CMAKE_CURRENT_BINARY_DIR}/BaseUnitsConfig.cmake DESTINATION lib/cmake)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/BaseUnitsConfigVersion.cmake ${CMAKE_CURRENT_BINARY_DIR}/BaseUnitsConfig.cmake DESTINATION lib/${CMAKE_PROJECT_NAME}/cmake)
