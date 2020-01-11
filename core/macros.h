@@ -29,6 +29,15 @@
   {\
     return unitName(value);\
   }\
+\
+  namespace units\
+  {\
+    template <>\
+    struct attributes<unitName>\
+    {\
+      static constexpr auto name = #unitName;\
+    };\
+  }
 //End of DECLARE_UNIT_WITH_TYPE macro
 
 //Macro to make unit declaration less painful for most cases.  You can always do it manually too.
@@ -51,6 +60,15 @@
   {\
     return unitName(value);\
   }\
+\
+  namespace units\
+  {\
+    template <>\
+    struct attributes<unitName>\
+    {\
+      static constexpr auto name = #unitName;\
+    };\
+  }
 //End of DECLARE_RELATED_UNIT macro
 
 //Example manual usage.  The macros do this for you.

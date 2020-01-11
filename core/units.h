@@ -63,6 +63,7 @@
 #define UNITS_UNITS_H
 
 //units includes
+#include "attributes.h"
 #include "derivedUnits.h"
 #include "quantity.h"
 #include "printUnits.h"
