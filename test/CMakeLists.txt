@@ -6,6 +6,8 @@ install(TARGETS arithmetic DESTINATION bin)
 #Install reference results
 add_subdirectory(reference)
 
+file(READ reference/test_arithmetic.txt test_arithmetic_reference)
+
 #Add tests to CTest's implicitly generated testing framework
 add_test(NAME test_arithmetic COMMAND ${CMAKE_INSTALL_PREFIX}/bin/arithmetic)
 set_tests_properties(test_arithmetic PROPERTIES PASS_REGULAR_EXPRESSION "${test_arithmetic_reference}")

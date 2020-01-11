@@ -18,7 +18,7 @@ namespace units
   template <class BASE_TAG, class PREFIX, class FLOATING_POINT>
   std::ostream& operator <<(std::ostream& os, const quantity<BASE_TAG, PREFIX, FLOATING_POINT> value)
   {
-    return os << value.template in<quantity<BASE_TAG, std::ratio<1>, FLOATING_POINT>>() << " " << BASE_TAG::name;
+    return os << value.template in<quantity<BASE_TAG, PREFIX, FLOATING_POINT>>() << " " << attributes<quantity<BASE_TAG, PREFIX, FLOATING_POINT>>::name;
   }
   
   //Specialization to end recursion without a trailing *
